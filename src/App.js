@@ -12,10 +12,10 @@ function App() {
   return (
     <div className="App">
       <div>
-        <h2>Счетчик:</h2>
+        <h2>Counter:</h2>
         <h1>{count}</h1>
-        <button className="minus" onClick={Decrement}>- Минус</button>
-        <button className="plus" onClick={Increment}>Плюс +</button>
+        <button className="minus" onClick={Decrement}>- Minus</button>
+        <button className="plus" onClick={Increment}>Plus +</button>
       </div>
     </div>
   );
