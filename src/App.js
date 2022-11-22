@@ -17,7 +17,7 @@ function App() {
   const [open, setOpen] = React.useState(false);
   return (
     <div className="App">
-      <button onClick={() => setOpen(true)} className="open-modal-btn">✨ Открыть окно</button>
+      <button onClick={() => setOpen(true)} className="open-modal-btn">✨ Open me!</button>
       <Modal open={open} setOpen={setOpen}/>
     </div>
   );
