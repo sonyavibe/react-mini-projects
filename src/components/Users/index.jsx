@@ -2,7 +2,7 @@ import React from 'react';
 import { Skeleton } from './Skeleton';
 import { User } from './User';
 
-export const Users = ({ items, isLoading }) => {
+export const Users = ({ items }) => {
   return (
     <>
       <div className="search">
@@ -11,17 +11,13 @@ export const Users = ({ items, isLoading }) => {
         </svg>
         <input type="text" placeholder="Найти пользователя..." />
       </div>
-      {isLoading ? (
-        <div className="skeleton-list">
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
-        </div>
-      ) : (
+      {
         <ul className="users-list">
-          <User />
+          {
+            items.map(obj => <User {...obj} />)
+          }
         </ul>
-      )}
+      }
       <button className="send-invite-btn">Отправить приглашение</button>
     </>
   );
